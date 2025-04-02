@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/boot.css">
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--LETRAS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=DM+Serif+Text:ital@1&family=Montserrat+Underline:ital,wght@1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-danger NAV"><!-- Navbar -->
+
+                <a class="navbar-brand" href="../Web/index.html">
+                    <img src="../Img/LogTXT-P.png" alt="Logo" style="width: 150px; height: 80px; border-radius: 5px;"
+                        title="Logo FLY-SAVER">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link dm-serif-text-regular" href="#">Información</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dm-serif-text-regular" href="#">Servicio en Linea</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dm-serif-text-regular" href="#">Grandes Ofertas</a>
+                        </li>
+                    </ul>
+
+                    <!-- Botón de idioma a la derecha -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <button id="Btn-Idioma" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><!--boton idioma-->
+                                <img src="../Img/BanderaCol.png" alt="" class="Bandera">
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#searchModal"
+                                style="border: none; background: none; color: black; margin-right: 5px;">
+                                Search<svg style="margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+                            </button>
+                        </li>
+
+                        <!-- Modal para la barra de búsqueda******** -->
+                        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <img src="../Img/FlySaverLOG.jpg" alt=""
+                                            style="width: 40px; height: 40px; border-radius: 3px;">
+                                        <h5 class="modal-title" id="searchModalLabel"
+                                            style="margin-top: 4px; padding-left: 4px;">Buscar</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="d-flex">
+                                            <input class="form-control me-2" type="search" placeholder="Buscar..."
+                                                aria-label="Search">
+                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                                                data-bs-target="#searchModal"
+                                                style="border: none; background: none; color: black;">
+                                                Search
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <li class="nav-item"><!-- Button trigger modal Iniciar sesion -->
+                            <!-- Button trigger modal Iniciar sesion -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal1" style="border: none; background: none; color: black;">
+                                Iniciar Sesion<svg style="margin-left: 5px; justify-content: center;"
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-person-square" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                    <path
+                                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                                </svg>
+                            </button>
+                            <!-- Modal inicio Sesion -->
+                            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="display: flex;">
+                                            <img src="../Img/FlySaverLOG.jpg" alt="" title="Logo Fly"
+                                                style="width: 80px; height: 80px; border-radius: 5px">
+                                            <h1 style="margin-left: 22%; margin-top: 5%;" class="modal-title fs-5"
+                                                id="exampleModalLabel">Iniciar Sesión</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="usuario">Usuario</label>
+                                                    <input type="text" class="form-control" id="usuario"
+                                                        placeholder="Ingresa tu usuario">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="contraseña">Contraseña</label>
+                                                    <input type="password" class="form-control" id="contraseña"
+                                                        placeholder="Ingresa tu contraseña">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="confirmarContraseña">Confirmar Contraseña</label>
+                                                    <input type="password" class="form-control" id="confirmarContraseña"
+                                                        placeholder="Confirma tu contraseña">
+                                                </div>
+                                                <div id="terminos&condiciones">
+                                                    <input type="checkbox" id="T&C" required>
+                                                    <label for="T&C">Acepta T&C</label>
+                                                </div>
+
+                                                <input type="button" value="confirmar" class="btn  btn-primary"
+                                                    id="confirmacion" onclick="pruebaContinuar();"
+                                                    style="margin-left: 40%;">
+                                            </form>
+
+                                        </div>
+                                        <div class="modal-footer d-flex justify-content-between">
+                                            <!-- Enlaces -->
+                                            <div class="d-flex align-items-center" id="link">
+                                                <a href="" class="text-primary">Crear Cuenta</a> |
+                                                <a href="#" class="text-primary" style="margin-left: 4px;">Recuperar
+                                                    Contraseña</a>
+                                            </div>
+
+                                            <!-- Botones -->
+                                            <div class="d-flex">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                                    style="margin-right: 5px;">Cerrar</button>
+                                                <button type="submit" class="btn btn-primary">Ingresar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    </div>
+    <!-- Modal Idioma -->
+    <div class="row">
+        <div class="col-12">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel"
+                                style="font-weight: bolder; text-align: center; margin-left: 35%;">
+                                Seleccione Idioma</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="display: flex; text-align: justify; font-weight: bold;">Selecciona el idioma en el
+                                que
+                                deseas navegar para que la página se adapte a tu preferencia, ofreciéndote una mejor
+                                comprensión
+                                y comodidad mientras exploras nuestros servicios. Elige el idioma de tu preferencia de
+                                la lista
+                                a continuación</p>
+                            <select class="form-select" aria-label="Default select example"><!--Seleccion idoma-->
+                                style="width: 80%; height: auto; margin-left: 8%;">
+                                <option selected>Español</option>
+                                <option value="1">Ingles </option>
+                                <option value="2">Aleman </option>
+                                <option value="3">Frances </option>
+                            </select>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary-emphasis"
+                                data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary-emphasis">Guardar Cambios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row"><!--cContenido de presentacion INICIO-->
+        <div class="col-12">
+            <div class="Cont-Presentacion"><!--cContenido de presentacion INICIO-->
+                <h1 style="margin-left: 41%;" id="titulito">FLY - SAVER</h1>
+                <div class="Btn-Presentacion">
+                    <div id="Botones">
+                        <button>Compra</button>
+                        <button>Check</button>
+                        <button>Ordenes</button>
+                    </div>
+                </div>
+                <form class="form-horizontal"><!--formulario horizontal-->
+                    <input type="text" id="dato1" name="dato1" placeholder="Usuario" class="Campos-Formu">
+                    <input type="datetime-local" id="dato2" name="dato2" placeholder="Partida" class="Campos-Formu">
+                    <input type="datetime-local" id="dato3" name="dato3" placeholder="Llegada" class="Campos-Formu">
+                    <input type="number" id="dato4" name="dato4" placeholder="Pasajeros" class="Campos-Formu">
+                    <input type="number" id="dato5" name="dato5" placeholder="# Niños" class="Campos-Formu">
+                    <button type="reset"
+                        style="border-radius: 8px; border-right: none; border: none; background-color: rgba(255, 0, 0, 1); color: white; text-align: center; height: 100%; width: 100%;">Hecho</button>
+                </form>
+                <input type="checkbox" name="Buscar-Hoteles" id="Hoteles"
+                    style="width: 60px; width: 60px; margin-left: 75%; margin-top: 15px; background-color: red;"><span>Acepto
+                    Terminos & Condiciones</span>
+
+                <div class="servicios"><!--Botones de services-->
+                    <button type="button">Mapa de Vuelo
+                        <svg style="margin-left: 130px; color: rgb(113, 113, 113);" xmlns="http://www.w3.org/2000/svg"
+                            width="26" height="26" fill="currentColor" class="bi bi-arrow-right-short"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                        </svg>
+                    </button>
+                    <button type="button">Horario de Vuelo
+                        <svg style="margin-left: 110px; color: rgb(113, 113, 113);" xmlns="http://www.w3.org/2000/svg"
+                            width="26" height="26" fill="currentColor" class="bi bi-arrow-right-short"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                        </svg>
+                    </button>
+                    <button type="button">Tablero de vuelo
+                        <svg style="margin-left: 120px; color: rgb(113, 113, 113);" xmlns="http://www.w3.org/2000/svg"
+                            width="26" height="26" fill="currentColor" class="bi bi-arrow-right-short"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                        </svg>
+                    </button>
+                    <button type="button">Servicios Adicionales
+                        <svg style="margin-left: 90px; color: rgb(113, 113, 113);" xmlns="http://www.w3.org/2000/svg"
+                            width="26" height="26" fill="currentColor" class="bi bi-arrow-right-short"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row"><!--Publicidad CON CARD-->
+        <div class="col-12">
+            <div class="publicidad"><!--Publicidad-->
+                <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card text-bg-dark">
+                                <img src="../Img/carrusel1.png" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card text-bg-dark">
+                                <img src="../Img/carrusel2.png" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card text-bg-dark">
+                                <img src="../Img/carrusel3.png" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card text-bg-dark">
+                                <img src="../Img/carrusel4.png" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card text-bg-dark">
+                                <img src="../Img/carrusel5.png" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card text-bg-dark">
+                                <img src="../Img/carrusel6.png" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card text-bg-dark">
+                                <img src="../Img/carrusel7.png" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="cards"><!--DESTINOS POPULARES-->
+        <div id="destinos">
+            <h1 id="destinos-populares">Destinos Populares</h1>
+            <div class="Contenedor-Btn-Dest">
+                <div style="margin-left: 850px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                    </svg>
+                    <svg style="margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                        fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="col-12" style="margin-top: 15px;"><!--Destinos populares CARDS-->
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col-md-3">
+                    <div class="card h-100" id="c">
+                        <img src="../Img/moscow3.png" class="card-img-top" alt="..." style="border-radius: 10px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: left; font-weight: 500;"><strong
+                                    style="font-weight: 100;">Desde</strong> 99.99 $</h5>
+                            <p class="card-text" style="color: black; font-weight: 400;">Moscu - San Petersburgo</p>
+                        </div>
+                        <div class="card-footer" style="margin-top: 8px;">
+                            <button class="btn btn-primary btn-hover"
+                                style="background-color: red; border: none;color: black; font-weight: 600;">Vamos a
+                                Volar</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100" id="c">
+                        <img src="../Img/moscow.png" class="card-img-top" alt="..." style="border-radius: 10px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: left; font-weight: 500;"><strong
+                                    style="font-weight: 100;">Desde</strong> 99.99 $</h5>
+                            <p class="card-text" style="color: black; font-weight: 400;">Moscu - San Petersburgo</p>
+                        </div>
+                        <div class="card-footer" style="margin-top: 8px;">
+                            <button class="btn btn-primary btn-hover"
+                                style="background-color: red; border: none;color: black; font-weight: 600;">Vamos a
+                                Volar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100" id="c">
+                        <img src="../Img/moscow2.png" class="card-img-top" alt="..." style="border-radius: 10px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: left; font-weight: 500;"><strong
+                                    style="font-weight: 100;">Desde</strong> 99.99 $</h5>
+                            <p class="card-text" style="color: black; font-weight: 400;">Moscu - San Petersburgo</p>
+                        </div>
+                        <div class="card-footer" style="margin-top: 8px;">
+                            <button class="btn btn-primary btn-hover"
+                                style="background-color: red; border: none;color: black; font-weight: 600;">Vamos a
+                                Volar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100" id="c">
+                        <img src="../Img/moscow-samara.png" class="card-img-top" alt="..." style="border-radius: 10px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: left; font-weight: 500;"><strong
+                                    style="font-weight: 100;">Desde</strong> 99.99 $</h5>
+                            <p class="card-text" style="color: black; font-weight: 400;">Moscu - San Petersburgo</p>
+                        </div>
+                        <div class="card-footer" style="margin-top: 8px;">
+                            <button class="btn btn-primary btn-hover"
+                                style="background-color: red; border: none;color: black; font-weight: 600;">Vamos a
+                                Volar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" id="cards"><!--Servicios Interesantes-->
+        <div id="destinos"><!--titulo-->
+            <h1 id="destinos-populares">Servicios Interesantes</h1>
+            <div class="Contenedor-Btn-Dest">
+                <div style="margin-left: 850px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                    </svg>
+                    <svg style="margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                        fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-cards-services" style="margin-top: 15px; background: none;">
+            <!--contenedor-cards-services-->
+            <div class="col-12"><!--Destinos populares CARDS-->
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col-md-4" style="background: none;">
+                        <div class="card h-100" id="c">
+                            <img src="../Img/services1.png" class="card-img-top" alt="..."
+                                style="border-radius: 10px; width: auto; height: auto;">
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="background: none;">
+                        <div class="card h-100" id="c">
+                            <img src="../Img/services2.png" class="card-img-top" alt="..."
+                                style="border-radius: 10px; width: auto; height: auto;">
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="background: none;">
+                        <div class="card h-100" id="c">
+                            <img src="../Img/services3.png" class="card-img-top" alt="..."
+                                style="border-radius: 10px; width: auto; height: auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row cont-datos"> <!-- Contenedor de datos -->
+        <div class="col-12">
+            <div class="card text-bg-dark">
+                <img src="../Img/prom.png" class="card-img">
+                <div class="card-img-overlay">
+                    <h2 class="card-title">Sé el primero en enterarte de</h2>
+                    <h2>promociones y descuentos.</h2>
+                    <p class="card-text">Suscríbete y recibe ofertas especiales</p>
+                    <div class="datos-Personales">
+                        <form style="display: flex;">
+                            <input type="email" name="Datos-personales-Email" id="Datos-personales-Email"
+                                placeholder="Por favor, digite su Email..." class="form-control">
+                            <button type="submit" class="btn btn-danger ms-2 mt-2 mt-sm-0"
+                                style="border-radius: 8px; width: auto;">Confirmar</button>
+                        </form>
+                    </div>
+                    <p class="card-text">
+                        <small>Al hacer clic en "Suscribirse", acepta el procesamiento
+                            <a href="#" id="hover-A">datos personales.</a></small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row"><!--Direcciones Rentables-->
+        <div class="col-12">
+            <div class="direcciones-rentables">
+                <h3>Direcciones Rentables</h3>
+                <button>Direcciones Del Dia</button>
+            </div>
+            <div class="Container-Direcciones">
+                <div class="col-4" style="display: flex; flex-direction: column;">
+                    <div class="item">
+                        <img src="../Img/BanderaCol.png" alt="">
+                        <div>
+                            <h4>San Petersburgo</h4>
+                            <p style="font-size: 18px; margin-left: 10px; color: rgb(82, 81, 81);">De Samara</p>
+                            <p style="font-size: 15px; margin-left: 10px; color: red;">desde <strong>99.99$</strong></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../Img/BanderaCol.png" alt="">
+                        <div>
+                            <h4>San Petersburgo</h4>
+                            <p style="font-size: 18px; margin-left: 10px; color: rgb(82, 81, 81);">De Samara</p>
+                            <p style="font-size: 15px; margin-left: 10px; color: red;">desde <strong>99.99$</strong></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../Img/BanderaCol.png" alt="">
+                        <div>
+                            <h4>San Petersburgo</h4>
+                            <p style="font-size: 18px; margin-left: 10px; color: rgb(82, 81, 81);">De Samara</p>
+                            <p style="font-size: 15px; margin-left: 10px; color: red;">desde <strong>99.99$</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4" style="display: flex; flex-direction: column;">
+                    <div class="item">
+                        <img src="../Img/BanderaCol.png" alt="">
+                        <div>
+                            <h4>San Petersburgo</h4>
+                            <p style="font-size: 18px; margin-left: 10px; color: rgb(82, 81, 81);">De Samara</p>
+                            <p style="font-size: 15px; margin-left: 10px; color: red;">desde <strong>99.99$</strong></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../Img/BanderaCol.png" alt="">
+                        <div>
+                            <h4>San Petersburgo</h4>
+                            <p style="font-size: 18px; margin-left: 10px; color: rgb(82, 81, 81);">De Samara</p>
+                            <p style="font-size: 15px; margin-left: 10px; color: red;">desde <strong>99.99$</strong></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../Img/BanderaCol.png" alt="">
+                        <div>
+                            <h4>San Petersburgo</h4>
+                            <p style="font-size: 18px; margin-left: 10px; color: rgb(82, 81, 81);">De Samara</p>
+                            <p style="font-size: 15px; margin-left: 10px; color: red;">desde <strong>99.99$</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4" style="display: flex; flex-direction: column;">
+                    <div class="item">
+                        <img src="../Img/BanderaCol.png" alt="">
+                        <div>
+                            <h4>San Petersburgo</h4>
+                            <p style="font-size: 18px; margin-left: 10px; color: rgb(82, 81, 81);">De Samara</p>
+                            <p style="font-size: 15px; margin-left: 10px; color: red;">desde <strong>99.99$</strong></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../Img/BanderaCol.png" alt="">
+                        <div>
+                            <h4>San Petersburgo</h4>
+                            <p style="font-size: 18px; margin-left: 10px; color: rgb(82, 81, 81);">De Samara</p>
+                            <p style="font-size: 15px; margin-left: 10px; color: red;">desde <strong>99.99$</strong></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../Img/BanderaCol.png" alt="">
+                        <div>
+                            <h4>San Petersburgo</h4>
+                            <p style="font-size: 18px; margin-left: 10px; color: rgb(82, 81, 81);">De Samara</p>
+                            <p style="font-size: 15px; margin-left: 10px; color: red;">desde <strong>99.99$</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Apartado-Preguntas"><!--preguntas-->
+        <div class="Respuesta-Desple"><!--Respuestas Acordeon Desplegables-->
+            <h4>Respuestas a preguntas frecuentes</h4>
+            <li style="margin-top: 18px; ">Escríbenos en redes sociales o messenger. Responderemos y ayudaremos en todas
+                partes.</li>
+            <div class="accordion" id="accordionPanelsStayOpenExample" style="margin-top: 80px; ">
+                <div class="accordion-item" style="border: none;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            ¿Cómo se controla el equipaje de mano permitido?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" style="border: none;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            ¿Cuánto equipaje puedo llevar conmigo?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
+                            the collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" style="border: none;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            ¿Cuáles son las franquicias de equipaje de mano para un billete?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" style="border: none;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            ¿Qué más puedes llevar gratis además de tu equipaje de mano?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Ir_Seccion"><!--Preguntas con boton-->
+            <h4>Preguntas frecuentes</h4>
+            <li style="margin-top: 18px; ">Escríbenos en redes sociales o messenger. Responderemos y ayudaremos en todas
+                partes.</li>
+            <button type="submit"
+                style="color: white; border-radius: 8px; border: none; background-color: rgb(231, 76, 60 ); width: 130px; height: 40px; font-weight: 500; margin-top: 30px;">Ir
+                a la Seccion</button>
+            <div class="Seccion-Estar-Cerca">
+                <h4>Siempre estamos cerca</h4>
+                <p style="margin-top: 15px;">Escríbenos en redes sociales o messenger. Responderemos y ayudaremos en
+                    todas partes.</p>
+                <p style="margin-top: 40px; text-align: center; box-shadow: 2px 2px 5px;" class="montserrat-underline">
+                    VUELA SIEMPRE CON LOS MEJORES!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="NEW"><!--Noticias-->
+        <div class="col-12">
+            <div class="Noticias">
+                <h3>Últimas noticias</h3>
+                <button style="border: none; background: none; color: black; font-weight: 600; margin-left: 70%;">Todas
+                    Las Noticias</button>
+            </div>
+            <div class="" style="display: flex;">
+
+                <div class="col-4" id="card-new">
+                    <div style="display: flex;">
+                        <button type="submit" style="color: white; border-radius: 8px; border: none; background-color: rgb(88, 152, 255); width: 90px; height: 25px; font-size: 13px; font-weight: 500; margin-top: 30px; padding: 5px 10px;">
+                            NEW
+                        </button>
+                    </div>
+                    <h5 style="margin-top: 20px; margin-left: 3px;">Llega la Temporada de Verano en familia, Vuela
+                        seguro, rapido</h5>
+                    <p style="margin-top: 20px;">Nuestro programa vacacional sera el mejor asdasdddddddddddddddd</p>
+                </div>
+                <div class="col-4" id="card-new">
+                    <div style="display: flex;">
+                        <button type="submit" style="color: white; border-radius: 8px; border: none; background-color: rgb(88, 152, 255); width: 90px; height: 25px; font-size: 13px; font-weight: 500; margin-top: 30px; padding: 5px 10px;">
+                            NEW
+                        </button>
+                    </div>
+                    <h5 style="margin-top: 20px; margin-left: 3px;">Llega la Temporada de Verano en familia, Vuela
+                        seguro, rapido</h5>
+                    <p style="margin-top: 20px;">Nuestro programa vacacional sera el mejor asdasdddddddddddddddd</p>
+                </div>
+                <div class="col-4" id="card-new">
+                    <div style="display: flex;">
+                        <button type="submit" style="color: white; border-radius: 8px; border: none; background-color: rgb(88, 152, 255); width: 90px; height: 25px; font-size: 13px; font-weight: 500; margin-top: 30px; padding: 5px 10px;">
+                            NEW
+                        </button>
+
+                    </div>
+                    <h5 style="margin-top: 20px; margin-left: 3px;">Llega la Temporada de Verano en familia, Vuela
+                        seguro, rapido</h5>
+                    <p style="margin-top: 20px;">Nuestro programa vacacional sera el mejor asdasdddddddddddddddd</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer id="footer"><!--footer-->
+        <div class="container">
+            <div class="row">
+                <!-- Sección 1: Información General -->
+                <div class="col-md-3">
+                    <h5 style="color: black;">Información</h5>
+                    <ol style="list-style-type: disc; padding: 0;">
+                        <li><a href="#" style="color: white; text-decoration: none;">Preguntas frecuentes</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Transporte de equipaje y equipaje de mano</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Transporte de animales</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Tarifas y condiciones</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Noticias</a></li>
+                    </ol>
+                </div>
+    
+                <!-- Sección 2: Servicios en Línea -->
+                <div class="col-md-3">
+                    <h5 style="color: black;">Servicios en línea</h5>
+                    <ol style="list-style-type: disc; padding: 0;">
+                        <li><a href="#" style="color: white; text-decoration: none;">Comprar un billete</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Buscar orden</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Registro en línea</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Marcador en línea</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Devolver un billete o servicio</a></li>
+                    </ol>
+                    <h5 style="color: black;">Legal</h5>
+                    <ol style="list-style-type: disc; padding: 0;">
+                        <li><a href="#" style="color: white; text-decoration: none;">Términos y condiciones</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Preguntas frecuentes</a></li>
+                    </ol>
+                </div>
+    
+                <!-- Sección 3: Servicios Adicionales -->
+                <div class="col-md-3">
+                    <h5 style="color: black;">Servicios adicionales</h5>
+                    <ol style="list-style-type: disc; padding: 0;">
+                        <li><a href="#" style="color: white; text-decoration: none;">Equipaje</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Equipaje de mano</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Elegir un asiento a bordo</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Comidas a bordo</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Seguro</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Todos los servicios adicionales</a></li>
+                    </ol>
+                    <h5 style="color: black;">Redes sociales</h5>
+                    <ol style="list-style-type: disc; padding: 0;">
+                        <li><a href="#" style="color: white; text-decoration: none;">Bot de Telegram</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Síguenos en redes sociales</a></li>
+                    </ol>
+                </div>
+    
+                <!-- Sección 4: Contacto y Redes Sociales -->
+                <div class="col-md-3">
+                    <h5 style="color: black;">Contacto</h5>
+                    <ol style="list-style-type: disc; padding: 0;">
+                        <li><a href="tel:+74959700055" style="color: white; text-decoration: none;">+7 495 970 00 55</a></li>
+                        <li>La llamada es gratuita para los suscriptores de Smart Up</li>
+                        <li><a href="tel:+78095055599" style="color: white; text-decoration: none;">+7 809 505 55 99</a></li>
+                        <li>La llamada se paga a partir de 59 rublos/min sin IVA</li>
+                    </ol>
+                    
+                    
+    
+                    
+                </div>
+            </div>
+        </div>
+    
+        <!-- Barra de derechos de autor -->
+        <div style="text-align: center; margin-top: 20px; font-size: 14px;">
+            <p>&copy; 2025 Aerolínea Ejemplo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="../JavaScript/boot.js"></script>
+    <script src="../JavaScript/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
