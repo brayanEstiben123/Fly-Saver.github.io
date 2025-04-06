@@ -145,7 +145,7 @@
                                                     <label for="T&C">Acepta T&C</label>
                                                 </div>
 
-                                                <input type="button" value="confirmar" class="btn  btn-primary"
+                                                <input type="button" value="INGRESAR" class="btn  btn-primary"
                                                     id="confirmacion" onclick="pruebaContinuar();"
                                                     style="margin-left: 40%;">
                                             </form>
@@ -163,7 +163,6 @@
                                             <div class="d-flex">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                                                     style="margin-right: 5px;">Cerrar</button>
-                                                <button type="submit" class="btn btn-primary">Ingresar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -222,19 +221,50 @@
                 <h1 style="margin-left: 41%;" id="titulito">FLY - SAVER</h1>
                 <div class="Btn-Presentacion">
                     <div id="Botones">
-                        <button>Compra</button>
-                        <button>Check</button>
-                        <button>Ordenes</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal1" style="color: black;">Compra</button>
+                        <button type="button" class="btn btn-secondary active" data-bs-toggle="modal" data-bs-target="#exampleModal1" style="color: black;">Check</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal1" style="color: black;">Ordenes</button>
                     </div>
                 </div>
                 <form class="form-horizontal"><!--formulario horizontal-->
                     <input type="text" id="dato1" name="dato1" placeholder="Usuario" class="Campos-Formu">
-                    <input type="datetime-local" id="dato2" name="dato2" placeholder="Partida" class="Campos-Formu">
+                    <label for="dato2">Partida</label>
+                    <input type="datetime-local" id="dato2" name="dato2" class="Campos-Formu">
+                    <label for="dato3">Llegada</label>
                     <input type="datetime-local" id="dato3" name="dato3" placeholder="Llegada" class="Campos-Formu">
-                    <input type="number" id="dato4" name="dato4" placeholder="Pasajeros" class="Campos-Formu">
+                    <input type="number" id="dato4" name="dato4" placeholder="# Pasajeros" class="Campos-Formu">
                     <input type="number" id="dato5" name="dato5" placeholder="# Niños" class="Campos-Formu">
-                    <button type="reset"
-                        style="border-radius: 8px; border-right: none; border: none; background-color: rgba(255, 0, 0, 1); color: white; text-align: center; height: 100%; width: 100%;">Hecho</button>
+                    <!--Boton que muestra los datos guardados en el formulario horizontal por medio del MODAL-->
+                    <button type="button" class="btn btn-primary" id="mostrarDatosBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="border-radius: 8px; border-right: none; border: none; background-color: rgba(255, 0, 0, 1); color: white; text-align: center; height: 100%; width: 100%;"> HECHO
+                    </button>
+                    <!--MODAL-->
+                    <div class="modal fade"  id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header" style="display: flex;">
+                                    <img src="../Img/FlySaverLOG.jpg" alt="" style="width: 50px; height: 50px; border-radius: 8px;"> 
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel" style="margin-left: 25%; margin-top: 15px;">Datos Ingresados..</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                            <div class="modal-body">
+                                <p style="text-align: justify; color: black;">Segun estos datos personales <strong>ingresados</strong> te recomendaremos diferentes destinos para que vueles <strong>SEGURO!</strong></p>
+                                <ol type="I">
+                                    <li id="MostrarUsuario" style="color: black; font-size: 20px;"></li>
+                                    <li id="MostrarPartida" style="color: black; font-size: 20px;"></li>
+                                    <li id="MostrarLlegada" style="color: black; font-size: 20px;"></li>
+                                    <li id="Pasajeros" style="color: black; font-size: 20px;"></li>
+                                    <li id="Ninos" style="color: black; font-size: 20px;"></li>
+                                </ol>
+                            </div>
+                            <div class="modal-footer" style="display: flex; text-align: center; justify-content: center; align-items: center;">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="width: 100px;">Cerrar</button>
+                                <a href="../Web/Compra.html">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continuar</button>
+                                </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </form>
                 <input type="checkbox" name="Buscar-Hoteles" id="Hoteles"
                     style="width: 60px; width: 60px; margin-left: 75%; margin-top: 15px; background-color: red;"><span>Acepto
@@ -405,11 +435,10 @@
                             <p class="card-text" style="color: black; font-weight: 400;">Moscu - San Petersburgo</p>
                         </div>
                         <div class="card-footer" style="margin-top: 8px;">
-                            <button class="btn btn-primary btn-hover"
+                            <button class="btn btn-primary btn-hover" data-bs-toggle="modal" data-bs-target="#exampleModal1"
                                 style="background-color: red; border: none;color: black; font-weight: 600;">Vamos a
                                 Volar</button>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -421,7 +450,7 @@
                             <p class="card-text" style="color: black; font-weight: 400;">Moscu - San Petersburgo</p>
                         </div>
                         <div class="card-footer" style="margin-top: 8px;">
-                            <button class="btn btn-primary btn-hover"
+                            <button class="btn btn-primary btn-hover" data-bs-toggle="modal" data-bs-target="#exampleModal1"
                                 style="background-color: red; border: none;color: black; font-weight: 600;">Vamos a
                                 Volar</button>
                         </div>
@@ -436,7 +465,7 @@
                             <p class="card-text" style="color: black; font-weight: 400;">Moscu - San Petersburgo</p>
                         </div>
                         <div class="card-footer" style="margin-top: 8px;">
-                            <button class="btn btn-primary btn-hover"
+                            <button class="btn btn-primary btn-hover" data-bs-toggle="modal" data-bs-target="#exampleModal1"
                                 style="background-color: red; border: none;color: black; font-weight: 600;">Vamos a
                                 Volar</button>
                         </div>
@@ -451,7 +480,7 @@
                             <p class="card-text" style="color: black; font-weight: 400;">Moscu - San Petersburgo</p>
                         </div>
                         <div class="card-footer" style="margin-top: 8px;">
-                            <button class="btn btn-primary btn-hover"
+                            <button class="btn btn-primary btn-hover" data-bs-toggle="modal" data-bs-target="#exampleModal1"
                                 style="background-color: red; border: none;color: black; font-weight: 600;">Vamos a
                                 Volar</button>
                         </div>
@@ -518,10 +547,9 @@
                     <p class="card-text">Suscríbete y recibe ofertas especiales</p>
                     <div class="datos-Personales">
                         <form style="display: flex;">
-                            <input type="email" name="Datos-personales-Email" id="Datos-personales-Email"
+                            <input style="margin-top: 2px;" type="email" name="Datos-personales-Email" id="Datos-personales-Email"
                                 placeholder="Por favor, digite su Email..." class="form-control">
-                            <button type="submit" class="btn btn-danger ms-2 mt-2 mt-sm-0"
-                                style="border-radius: 8px; width: auto;">Confirmar</button>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal1" style="background-color: rgb(233, 9, 9); border-radius: 8px; width: 120px; height: 42px; margin-left: 5px;">Confirmar</button>
                         </form>
                     </div>
                     <p class="card-text">
@@ -737,6 +765,12 @@
                         <button type="submit" style="color: white; border-radius: 8px; border: none; background-color: rgb(159, 13, 232); width: 90px; height: 25px; font-size: 13px; font-weight: 500; margin-top: 30px; padding: 5px 10px;">
                             NEW
                         </button>
+                        <p style="margin-top: 30px; margin-left: 40%; color: rgb(159, 13, 232); font-style: oblique; font-weight: 500;">Noticias 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                           </svg> 
+                        </p>
                     </div>
                     <h5 style="margin-top: 20px; margin-left: 3px;">Llega la Temporada de Verano en familia, Vuela
                         seguro, rapido</h5>
@@ -747,6 +781,12 @@
                         <button type="submit" style="color: white; border-radius: 8px; border: none; background-color: rgb(88, 152, 255); width: 90px; height: 25px; font-size: 13px; font-weight: 500; margin-top: 30px; padding: 5px 10px;">
                             FLY
                         </button>
+                        <p style="margin-top: 30px; margin-left: 40%; color: rgb(88, 152, 255); font-style: oblique; font-weight: 500;">Noticias 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                           </svg> 
+                        </p>
                     </div>
                     <h5 style="margin-top: 20px; margin-left: 3px;">Lanzaremos vuelos adicionales durante la vacaciones escolares.</h5>
                     <p style="margin-top: 20px;">La ampliacion de programas de vuelo afectara rutas populares.</p>
@@ -756,6 +796,12 @@
                         <button type="submit" style="color: white; border-radius: 8px; border: none; background-color: rgb(232, 25, 25); width: 90px; height: 25px; font-size: 13px; font-weight: 500; margin-top: 30px; padding: 5px 10px;">
                             EXTERIOR
                         </button>
+                        <p style="margin-top: 30px; margin-left: 40%; color: red; font-style: oblique; font-weight: 500;">Noticias 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                           </svg> 
+                        </p>
                     </div>
                     <h5 style="margin-top: 20px; margin-left: 3px;">¡Vuela al extranjero por menos con <strong>FLY-SAVER</strong>!</h5>
                     <p style="margin-top: 20px;">¿Estás buscando una aventura internacional sin romper tu presupuesto? Te traemos los destinos más económicos para volar este año. ¡No dejes pasar estas ofertas irresistibles!</p>
