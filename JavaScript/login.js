@@ -2,7 +2,7 @@
 function pruebaContinuar(){
     alert("¡Bienvenido, podras realizar comprar con FLY-SAVER!");
     confirmacion = document.getElementById("confirmacion").value;
-    window.location.href = "https://www.youtube.com/watch?v=X1e724AA-wU"; 
+    window.location.href = "../Web/Compra.html"; 
 
 }
 //Para mostar mediante el MOdal los datos del usuario en el FORMULARIO HORIZONTAL
