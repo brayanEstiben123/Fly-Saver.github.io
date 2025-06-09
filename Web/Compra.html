@@ -438,30 +438,98 @@
         <div class="col-md-4">
             <div class="mb-4 p-4 bg-light rounded shadow-sm">
                 <h5 class="text-center">Información sobre los acompañantes</h5>
-
+                  <!-- Botones con modals para informacion de diferentes edades -->
                 <div class="d-flex justify-content-center flex-wrap gap-2 mb-3">
                     <button class="btn"
                         style="background-color: rgba(51, 177, 244, 0.51); color: black; border-color: black;"
-                        type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1"
-                        aria-expanded="false" aria-controls="multiCollapseExample1">Jóvenes</button>
-
-                    <a class="btn"
-                        style="background-color: rgba(51, 177, 244, 0.51); color: black; border-color: black;"
-                        data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false"
-                        aria-controls="multiCollapseExample2">Niños</a>
+                        data-bs-toggle="modal" data-bs-target="#modalJovenes">Jóvenes</button>
 
                     <button class="btn"
                         style="background-color: rgba(51, 177, 244, 0.51); color: black; border-color: black;"
-                        type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3"
-                        aria-expanded="false" aria-controls="multiCollapseExample3">Bebés</button>
+                        data-bs-toggle="modal" data-bs-target="#modalNinos">Niños</button>
 
                     <button class="btn"
                         style="background-color: rgba(51, 177, 244, 0.51); color: black; border-color: black;"
-                        type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false"
-                        aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3">
-                        Familia
-                    </button>
+                        data-bs-toggle="modal" data-bs-target="#modalBebes">Bebés</button>
+
+                    <button class="btn"
+                        style="background-color: rgba(51, 177, 244, 0.51); color: black; border-color: black;"
+                        data-bs-toggle="modal" data-bs-target="#modalFamilia">Familia</button>
                 </div>
+
+                <!-- Modal Jóvenes -->
+                <div class="modal fade" id="modalJovenes" tabindex="-1" aria-labelledby="modalJovenesLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalJovenesLabel">Viajar con Jóvenes</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                Asegúrate de llevar documentos, snacks y dispositivos con entretenimiento. Si viajan
+                                solos, consulta con la aerolínea sobre las políticas para menores no acompañados.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Niños -->
+                <div class="modal fade" id="modalNinos" tabindex="-1" aria-labelledby="modalNinosLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalNinosLabel">Viajar con Niños</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                Lleva juguetes, libros y snacks. Planea paradas si el viaje es largo. Asegúrate de que
+                                usen el cinturón de seguridad en todo momento.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Bebés -->
+                <div class="modal fade" id="modalBebes" tabindex="-1" aria-labelledby="modalBebesLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalBebesLabel">Viajar con Bebés</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                Lleva pañales, biberones y ropa extra. Durante el despegue y aterrizaje, ayuda al bebé a
+                                tragar (con biberón o chupete) para evitar molestias en los oídos.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Familia -->
+                <div class="modal fade" id="modalFamilia" tabindex="-1" aria-labelledby="modalFamiliaLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFamiliaLabel">Viajar en Familia</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                Planifica con anticipación, lleva documentos de todos los miembros y organiza el
+                                equipaje con lo esencial a mano. Llega al aeropuerto con tiempo y disfruta del viaje
+                                juntos.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
                 <div class="text-center mt-3">
                     <img src="../Img/familiaFuncional.png" alt="Familia viajando" class="img-fluid"
                         style="border-radius: 8px; box-shadow: -5px 1px 5px;">
